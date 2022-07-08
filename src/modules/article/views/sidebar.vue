@@ -1,5 +1,5 @@
 <template>
-   <div class="dashboard">
+   <div class="my-dashboard">
       <h1>Dashboard Page</h1>
    </div>
 </template>
@@ -11,7 +11,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.dashboard {
+.my-dashboard {
    display: flex;
    justify-content: center;
    align-content: center;

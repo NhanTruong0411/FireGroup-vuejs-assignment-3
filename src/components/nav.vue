@@ -60,6 +60,7 @@ export default {
       display: flex;
       justify-content: space-between;
       border-bottom: 1px solid #F3F3F3;
+      background: #ffffff;
 
       &--bars {
          display: flex;

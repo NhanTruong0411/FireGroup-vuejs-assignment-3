@@ -1,85 +1,40 @@
 <template>
    <div class="container">
-      <div class="action">
-         <div class="action__search">
-            <div class="input-group">
-               <input class="input" type="text" placeholder="Search product">
-               <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                     d="M13.8906 13.5742L10.582 10.2656C10.5 10.2109 10.418 10.1562 10.3359 10.1562H9.98047C10.8281 9.17188 11.375 7.85938 11.375 6.4375C11.375 3.32031 8.80469 0.75 5.6875 0.75C2.54297 0.75 0 3.32031 0 6.4375C0 9.58203 2.54297 12.125 5.6875 12.125C7.10938 12.125 8.39453 11.6055 9.40625 10.7578V11.1133C9.40625 11.1953 9.43359 11.2773 9.48828 11.3594L12.7969 14.668C12.9336 14.8047 13.1523 14.8047 13.2617 14.668L13.8906 14.0391C14.0273 13.9297 14.0273 13.7109 13.8906 13.5742ZM5.6875 10.8125C3.25391 10.8125 1.3125 8.87109 1.3125 6.4375C1.3125 4.03125 3.25391 2.0625 5.6875 2.0625C8.09375 2.0625 10.0625 4.03125 10.0625 6.4375C10.0625 8.87109 8.09375 10.8125 5.6875 10.8125Z"
-                     fill="#4F4F4F" />
-               </svg>
+      <form class="products">
+         <div class="products__product products__header">
+            <div class="products__product--checkbox">
+               <input type="checkbox">
             </div>
-         </div>
-
-         <div class="action__sort-group">
-            <!-- Status -->
-            <button class="btn btn-sort">
+            <div class="products__product--product">
+               <h3>Product</h3>
+            </div>
+            <div class="products__product--status">
+               <svg width="15" height="19" viewBox="0 0 15 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                     d="M12.4535 2.92268C12.4535 2.80597 12.3888 2.76707 12.2918 2.76707C12.2271 2.76707 11.0952 2.72816 11.0952 2.72816C11.0952 2.72816 10.416 1.91122 10.1573 1.6V18.4446L14.2 17.1998C14.2 17.1998 12.4535 3.00048 12.4535 2.92268ZM9.21936 1.6C9.18702 1.40549 9.05765 1.09428 8.99297 0.899765C8.66955 0.121723 8.15208 -0.3062 7.56993 -0.3062C7.53759 -0.3062 7.53759 -0.3062 7.53759 -0.3062C7.50525 -0.3062 7.44056 -0.267298 7.44056 -0.267298C7.40822 -0.3062 7.37588 -0.3062 7.37588 -0.345103C7.11715 -0.695222 6.79373 -0.85083 6.37329 -0.85083C5.59709 -0.811928 4.82088 -0.150592 4.20639 1.05537C3.75361 1.91122 3.43019 2.96158 3.33316 3.77852C2.4276 4.12864 1.8131 4.36205 1.8131 4.36205C1.36032 4.55656 1.32798 4.55656 1.29564 5.06229C1.26329 5.45131 0.0666504 16.4217 0.0666504 16.4217L9.83385 18.4446V1.40549C9.80151 1.40549 9.73682 1.40549 9.70448 1.44439C9.67214 1.44439 9.51043 1.4833 9.21936 1.6ZM7.44056 2.26134C6.9231 2.45585 6.34094 2.68926 5.79114 2.88377C5.95284 2.14463 6.24392 1.40549 6.63202 0.938667C6.76139 0.744157 6.95544 0.549646 7.18183 0.43294C7.40822 0.977569 7.44056 1.75561 7.44056 2.26134ZM6.37329 -0.189494H6.40563C6.535 -0.189494 6.72905 -0.11169 6.85841 -0.0727878C6.63202 0.0828207 6.43797 0.277331 6.24392 0.510744C5.72645 1.13318 5.37069 2.14463 5.20898 3.07828C4.7562 3.27279 4.27107 3.4284 3.85063 3.58401C4.14171 2.10573 5.17664 -0.150592 6.37329 -0.189494ZM4.88557 8.36897C4.91791 9.38043 7.11715 9.57494 7.24651 11.948C7.34354 13.7764 6.43797 15.0601 5.11196 15.1379C3.52721 15.2546 2.68633 14.1654 2.68633 14.1654L3.00975 12.4537C3.00975 12.4537 3.88297 13.2317 4.56215 13.1539C5.01493 13.1539 5.20898 12.6871 5.17664 12.3759C5.11196 11.0532 3.33316 11.131 3.2038 8.99141C3.10677 7.20191 4.10937 5.37351 6.27626 5.179C7.11715 5.1401 7.53759 5.37351 7.53759 5.37351L7.05246 7.62983C7.05246 7.62983 6.50265 7.31861 5.82348 7.35752C4.88557 7.43532 4.85323 8.17446 4.88557 8.36897ZM7.95803 2.06683C7.95803 1.6 7.89335 0.938667 7.73164 0.394038C8.31379 0.510744 8.60487 1.32769 8.73423 1.79451C8.50784 1.87232 8.24911 1.98902 7.95803 2.06683Z"
+                     fill="#95BF47" />
+               </svg>
                <h3>Status</h3>
-               <svg width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                     d="M0.726562 0C0.304688 0 0.09375 0.515625 0.398438 0.820312L3.39844 3.82031C3.58594 4.00781 3.89062 4.00781 4.07812 3.82031L7.07812 0.820312C7.38281 0.515625 7.17188 0 6.75 0H0.726562Z"
-                     fill="#4F4F4F" />
-               </svg>
-            </button>
-
-            <!-- Quantity -->
-            <button class="btn btn-sort">
+            </div>
+            <div class="products__product--qty">
                <h3>Quantity</h3>
-               <svg width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                     d="M0.726562 0C0.304688 0 0.09375 0.515625 0.398438 0.820312L3.39844 3.82031C3.58594 4.00781 3.89062 4.00781 4.07812 3.82031L7.07812 0.820312C7.38281 0.515625 7.17188 0 6.75 0H0.726562Z"
-                     fill="#4F4F4F" />
-               </svg>
-            </button>
-
-            <!-- Shipping -->
-            <button class="btn btn-sort">
-               <h3>Shipping</h3>
-               <svg width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                     d="M0.726562 0C0.304688 0 0.09375 0.515625 0.398438 0.820312L3.39844 3.82031C3.58594 4.00781 3.89062 4.00781 4.07812 3.82031L7.07812 0.820312C7.38281 0.515625 7.17188 0 6.75 0H0.726562Z"
-                     fill="#4F4F4F" />
-               </svg>
-            </button>
-
-            <!-- Profile -->
-            <button class="btn btn-sort">
+            </div>
+            <div class="products__product--option">
+               <h3>Options</h3>
+            </div>
+            <div class="products__product--profile">
                <h3>Profile</h3>
-               <svg width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                     d="M0.726562 0C0.304688 0 0.09375 0.515625 0.398438 0.820312L3.39844 3.82031C3.58594 4.00781 3.89062 4.00781 4.07812 3.82031L7.07812 0.820312C7.38281 0.515625 7.17188 0 6.75 0H0.726562Z"
-                     fill="#4F4F4F" />
-               </svg>
-            </button>
-
-            <!-- Ready to push -->
-            <button class="btn btn-sort">
-               <h3>Ready to push</h3>
-               <svg width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                     d="M0.726562 0C0.304688 0 0.09375 0.515625 0.398438 0.820312L3.39844 3.82031C3.58594 4.00781 3.89062 4.00781 4.07812 3.82031L7.07812 0.820312C7.38281 0.515625 7.17188 0 6.75 0H0.726562Z"
-                     fill="#4F4F4F" />
-               </svg>
-            </button>
+            </div>
+            <div class="products__product--shipping">
+               <h3>Shipping</h3>
+            </div>
+            <div class="products__product--action">
+               <h3>Actions</h3>
+            </div>
+            <div class="products__product--more"></div>
          </div>
-
-         <div class="action__sort-single">
-            <button class="btn btn-sort">
-               <svg width="13" height="11" viewBox="0 0 13 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                     d="M3.50781 0.367188C3.4375 0.320312 3.32031 0.273438 3.25 0.273438C3.15625 0.273438 3.03906 0.320312 2.96875 0.367188L1.09375 2.61719C0.859375 2.85156 1.02344 3.25 1.375 3.25H2.5V10.375C2.5 10.5859 2.66406 10.75 2.875 10.75H3.625C3.8125 10.75 4 10.5859 4 10.375V3.25H5.125C5.45312 3.25 5.61719 2.85156 5.38281 2.61719L3.50781 0.367188ZM12.3438 0.25H7.65625C7.28125 0.25 7 0.554688 7 0.90625V4.84375C7 5.21875 7.28125 5.5 7.65625 5.5H12.3438C12.6953 5.5 13 5.21875 13 4.84375V0.90625C13 0.554688 12.6953 0.25 12.3438 0.25ZM11.0312 7H7.46875C7.1875 7 7 7.21094 7 7.46875V10.2812C7 10.5625 7.1875 10.75 7.46875 10.75H11.0312C11.2891 10.75 11.5 10.5625 11.5 10.2812V7.46875C11.5 7.21094 11.2891 7 11.0312 7Z"
-                     fill="#4F4F4F" />
-               </svg>
-               <h3>Sort</h3>
-            </button>
-         </div>
-      </div>
-
-      <div class="content">
-
-      </div>
-
+         <!-- <div class="products__product"></div> -->
+      </form>
    </div>
 </template>
 
@@ -92,47 +47,74 @@ export default {
 <style lang="scss" scoped>
 @import '../../../styles/scss/main.scss';
 
-.action {
-   display: flex;
-   gap: 15px;
+.products {
+   background: #FFFFFF;
+   border: 1px solid #E5E8EF;
+   border-radius: 3px;
 
-   &__search {
-      flex: 0 0 40%;
+   &__header {
+      h3 {
+         font-weight: 600;
+         font-size: 14px;
+         line-height: 20px;
+         color: #828282;
+      }
    }
 
-   &__sort-group {
-      flex: 0 0 40%;
+   &__product {
       display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 31px 0;
 
-      button {
+
+      &--checkbox {
+         flex: 0 0 4.5%;
          display: flex;
-         gap: 5px;
-         height: 40px;
-         padding: 12px 13px;
+         justify-content: center;
+         align-items: center;
+
+         input {
+            width: 16px;
+            height: 16px;
+         }
       }
 
-      button:first-child {
-         border-radius: 4px 0px 0px 4px;
+      &--product {
+         flex: 0 0 28%;
       }
 
-      button:last-child {
-         border-radius: 0px 4px 4px 0px;
-         white-space: nowrap;
-      }
-
-      button:not(:last-child) {
-         border-right: 0;
-      }
-   }
-
-   &__sort-single {
-      button {
+      &--status {
+         flex: 0 0 8%;
          display: flex;
-         gap: 5px;
-         padding: 12px 15px;
-         border-radius: 4px;
+         justify-content: center;
+         align-items: center;
       }
-   }
 
+      &--qty {
+         flex: 0 0 13%;
+      }
+
+      &--option {
+         flex: 0 0 8%;
+      }
+
+      &--profile {
+         flex: 0 0 13%;
+      }
+
+      &--shipping {
+         flex: 0 0 10%;
+      }
+
+      &--action {
+         flex: 0 0 10%;
+      }
+
+      &--more {
+         flex: 0 0 5%;
+      }
+
+   }
 }
 </style>
