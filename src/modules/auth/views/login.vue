@@ -231,8 +231,9 @@ export default {};
             }
 
             small {
+               padding: 0 10px;
                background: $bg-color;
-               z-index: 999
+               z-index: 999;
             }
          }
 

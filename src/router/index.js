@@ -10,7 +10,7 @@ const routes = [
     name: "login",
     meta: {
       layout: "auth",
-      
+
     },
     component: () => import("../modules/auth/views/login.vue"),
   },

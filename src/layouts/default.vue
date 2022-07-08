@@ -11,6 +11,7 @@
         </div>
         <!-- MAIN CONTENT -->
         <div class="main-content">
+          <actionbar></actionbar>
           <router-view></router-view>
         </div>
       </div>
@@ -20,11 +21,14 @@
 <script>
 import dashboard from '../components/dashboard.vue';
 import menutop from '../components/nav.vue';
+import actionbar from '../components/action.vue';
+
 
 export default {
   components: {
     dashboard,
-    menutop
+    menutop,
+    actionbar
   }
 };
 </script>
@@ -37,6 +41,7 @@ export default {
     }
     &__right {
       flex: 0 0 85%;
+      background: #F5F5F5;;
     }
 }
 </style>
