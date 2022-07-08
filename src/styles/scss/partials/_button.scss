@@ -1,0 +1,38 @@
+.btn {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 100%;
+   background: #ffffff;
+   border: 1px solid #ebebf0;
+   border-radius: 2px;
+   padding: 11px 0;
+   color: #000000;
+   cursor: pointer;
+}
+
+.btn-primary {
+   background: #5b86e5;
+   border-radius: 4px;
+   color: #ffffff;
+
+   h3 {
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 16px;
+      color: #ffffff;
+   }
+}
+
+.btn-sort {
+   background: #ffffff;
+   border: 1px solid #e5e8ef;
+   padding: 12px 0 12px 14px;
+
+   h3 {
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 16px;
+      color: #4f4f4f;
+   }
+}
