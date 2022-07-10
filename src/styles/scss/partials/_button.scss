@@ -1,17 +1,22 @@
 .btn {
-   display: flex;
    justify-content: center;
    align-items: center;
-   width: 100%;
    background: #ffffff;
    border: 1px solid #ebebf0;
    border-radius: 2px;
    padding: 11px 0;
    color: #000000;
    cursor: pointer;
+   transition: .5s all ease;
+}
+
+.btn:hover {
+   background: none;
+   box-shadow: 0 0 11px rgba(33,33,33,.2); 
 }
 
 .btn-primary {
+   width: 100%;
    background: #5b86e5;
    border-radius: 4px;
    color: #ffffff;
@@ -21,6 +26,22 @@
       font-size: 15px;
       line-height: 16px;
       color: #ffffff;
+   }
+}
+
+.btn-primary:hover {
+   border: 1px solid $primary-color;
+   color: $primary-color;
+   box-shadow: 0 0 11px $primary-color;
+
+   h3 {
+      color: $primary-color;
+   }
+   
+   svg {
+      path {
+         fill: $primary-color;
+      }
    }
 }
 
@@ -34,5 +55,19 @@
       font-size: 14px;
       line-height: 16px;
       color: #4f4f4f;
+   }
+}
+
+.btn-action {
+   border: 1px solid $primary-color;
+   h3{ 
+      color: $primary-color;
+   }
+}
+
+.btn-action:hover {
+   background: $primary-color;
+   h3 {
+      color: #ffffff;
    }
 }

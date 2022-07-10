@@ -1,6 +1,8 @@
 <template>
    <div class="container">
+      <actionbar></actionbar>
       <form class="products">
+         <!-- FORM PRODUCT HEADING -->
          <div class="products__product products__header">
             <div class="products__product--checkbox">
                <input type="checkbox">
@@ -33,14 +35,465 @@
             </div>
             <div class="products__product--more"></div>
          </div>
-         <!-- <div class="products__product"></div> -->
+
+         <!-- FORM PRODUCT 1 -->
+         <div class="products__product">
+            <div class="products__product--checkbox">
+               <input type="checkbox">
+            </div>
+            <div class="products__product--product">
+               <div class="products__product--product-image">
+                  <img src="../../../assets/images/product/product_1.png" alt="product">
+               </div>
+               <div class="products__product--product-content">
+                  <h3>
+                     Imwete Anti Blue Light Computer...<br>
+                     <small>Shopify ID: 343972834378</small>
+                  </h3>
+               </div>
+            </div>
+            <div class="products__product--status active-ul-li">
+               <ul>
+                  <li>Active</li>
+               </ul>
+            </div>
+            <div class="products__product--qty">
+               <h5>2816 <small>in stock for</small></h5>
+               <h5>3 <small>variants</small></h5>
+            </div>
+
+            <div class="products__product--option ">
+               <small>2</small>
+            </div>
+            <div class="products__product--profile">
+               <button class="btn">
+                  <h3>Global selling</h3>
+                  <svg width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                     <path
+                        d="M0.726562 0.181824C0.304688 0.181824 0.09375 0.697449 0.398438 1.00214L3.39844 4.00214C3.58594 4.18964 3.89062 4.18964 4.07812 4.00214L7.07812 1.00214C7.38281 0.697449 7.17188 0.181824 6.75 0.181824H0.726562Z"
+                        fill="#4F4F4F" />
+                  </svg>
+               </button>
+            </div>
+            <div class="products__product--shipping">
+               <button class="btn">
+                  <h3>Shipping 1</h3>
+                  <svg width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                     <path
+                        d="M0.726562 0.181824C0.304688 0.181824 0.09375 0.697449 0.398438 1.00214L3.39844 4.00214C3.58594 4.18964 3.89062 4.18964 4.07812 4.00214L7.07812 1.00214C7.38281 0.697449 7.17188 0.181824 6.75 0.181824H0.726562Z"
+                        fill="#4F4F4F" />
+                  </svg>
+               </button>
+            </div>
+            <div class="products__product--action">
+               <button class="btn btn-action">
+                  <h3>Push to Etsy</h3>
+               </button>
+            </div>
+            <div class="products__product--more">
+               <svg width="40" height="40" viewBox="0 0 32 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="0.5" y="0.682007" width="31" height="31" rx="3.5" stroke="#E5E8EF" />
+                  <path
+                     d="M16 14.6195C15.2617 14.6195 14.6875 15.2211 14.6875 15.932C14.6875 16.6703 15.2617 17.2445 16 17.2445C16.7109 17.2445 17.3125 16.6703 17.3125 15.932C17.3125 15.2211 16.7109 14.6195 16 14.6195ZM14.6875 11.7758C14.6875 12.514 15.2617 13.0883 16 13.0883C16.7109 13.0883 17.3125 12.514 17.3125 11.7758C17.3125 11.0648 16.7109 10.4633 16 10.4633C15.2617 10.4633 14.6875 11.0648 14.6875 11.7758ZM14.6875 20.0883C14.6875 20.8265 15.2617 21.4008 16 21.4008C16.7109 21.4008 17.3125 20.8265 17.3125 20.0883C17.3125 19.3773 16.7109 18.7758 16 18.7758C15.2617 18.7758 14.6875 19.3773 14.6875 20.0883Z"
+                     fill="#828282" />
+               </svg>
+            </div>
+         </div>
+
+         <!-- FORM PRODUCT 2 -->
+         <div class="products__product">
+            <div class="products__product--checkbox">
+               <input type="checkbox">
+            </div>
+            <div class="products__product--product">
+               <div class="products__product--product-image">
+                  <img src="../../../assets/images/product/product_2.png" alt="product">
+               </div>
+               <div class="products__product--product-content">
+                  <h3>
+                     Imwete Anti Blue Light Computer...<br>
+                     <small>Shopify ID: 343972834378</small>
+                  </h3>
+               </div>
+            </div>
+            <div class="products__product--status active-ul-li">
+               <ul>
+                  <li>Active</li>
+               </ul>
+            </div>
+            <div class="products__product--qty">
+               <h5>2816 <small>in stock for</small></h5>
+               <h5>3 <small>variants</small></h5>
+            </div>
+
+            <div class="products__product--option ">
+               <small class="red-underline">3</small>
+            </div>
+            <div class="products__product--profile">
+               <button class="btn">
+                  <h3>Global selling</h3>
+                  <svg width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                     <path
+                        d="M0.726562 0.181824C0.304688 0.181824 0.09375 0.697449 0.398438 1.00214L3.39844 4.00214C3.58594 4.18964 3.89062 4.18964 4.07812 4.00214L7.07812 1.00214C7.38281 0.697449 7.17188 0.181824 6.75 0.181824H0.726562Z"
+                        fill="#4F4F4F" />
+                  </svg>
+               </button>
+            </div>
+            <div class="products__product--shipping">
+               <button class="btn">
+                  <h3>Shipping 1</h3>
+                  <svg width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                     <path
+                        d="M0.726562 0.181824C0.304688 0.181824 0.09375 0.697449 0.398438 1.00214L3.39844 4.00214C3.58594 4.18964 3.89062 4.18964 4.07812 4.00214L7.07812 1.00214C7.38281 0.697449 7.17188 0.181824 6.75 0.181824H0.726562Z"
+                        fill="#4F4F4F" />
+                  </svg>
+               </button>
+            </div>
+            <div class="products__product--action">
+               <button class="btn btn-action">
+                  <h3>Push to Etsy</h3>
+               </button>
+            </div>
+            <div class="products__product--more">
+               <svg width="40" height="40" viewBox="0 0 32 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="0.5" y="0.682007" width="31" height="31" rx="3.5" stroke="#E5E8EF" />
+                  <path
+                     d="M16 14.6195C15.2617 14.6195 14.6875 15.2211 14.6875 15.932C14.6875 16.6703 15.2617 17.2445 16 17.2445C16.7109 17.2445 17.3125 16.6703 17.3125 15.932C17.3125 15.2211 16.7109 14.6195 16 14.6195ZM14.6875 11.7758C14.6875 12.514 15.2617 13.0883 16 13.0883C16.7109 13.0883 17.3125 12.514 17.3125 11.7758C17.3125 11.0648 16.7109 10.4633 16 10.4633C15.2617 10.4633 14.6875 11.0648 14.6875 11.7758ZM14.6875 20.0883C14.6875 20.8265 15.2617 21.4008 16 21.4008C16.7109 21.4008 17.3125 20.8265 17.3125 20.0883C17.3125 19.3773 16.7109 18.7758 16 18.7758C15.2617 18.7758 14.6875 19.3773 14.6875 20.0883Z"
+                     fill="#828282" />
+               </svg>
+            </div>
+         </div>
+
+         <!-- FORM PRODUCT 3 -->
+         <div class="products__product">
+            <div class="products__product--checkbox">
+               <input type="checkbox">
+            </div>
+            <div class="products__product--product">
+               <div class="products__product--product-image">
+                  <img src="../../../assets/images/product/product_3.png" alt="product">
+               </div>
+               <div class="products__product--product-content">
+                  <h3>
+                     Imwete Anti Blue Light Computer...<br>
+                     <small>Shopify ID: 343972834378</small>
+                  </h3>
+               </div>
+            </div>
+            <div class="products__product--status active-ul-li">
+               <ul>
+                  <li>Active</li>
+               </ul>
+            </div>
+            <div class="products__product--qty">
+               <h5>2816 <small>in stock for</small></h5>
+               <h5>3 <small>variants</small></h5>
+            </div>
+
+            <div class="products__product--option ">
+               <small class="red-underline">3</small>
+            </div>
+            <div class="products__product--profile">
+               <button class="btn">
+                  <h3>Global selling</h3>
+                  <svg width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                     <path
+                        d="M0.726562 0.181824C0.304688 0.181824 0.09375 0.697449 0.398438 1.00214L3.39844 4.00214C3.58594 4.18964 3.89062 4.18964 4.07812 4.00214L7.07812 1.00214C7.38281 0.697449 7.17188 0.181824 6.75 0.181824H0.726562Z"
+                        fill="#4F4F4F" />
+                  </svg>
+               </button>
+            </div>
+            <div class="products__product--shipping">
+               <button class="btn">
+                  <h3>Shipping 1</h3>
+                  <svg width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                     <path
+                        d="M0.726562 0.181824C0.304688 0.181824 0.09375 0.697449 0.398438 1.00214L3.39844 4.00214C3.58594 4.18964 3.89062 4.18964 4.07812 4.00214L7.07812 1.00214C7.38281 0.697449 7.17188 0.181824 6.75 0.181824H0.726562Z"
+                        fill="#4F4F4F" />
+                  </svg>
+               </button>
+            </div>
+            <div class="products__product--action">
+               <button class="btn btn-action">
+                  <h3>Push to Etsy</h3>
+               </button>
+            </div>
+            <div class="products__product--more">
+               <svg width="40" height="40" viewBox="0 0 32 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="0.5" y="0.682007" width="31" height="31" rx="3.5" stroke="#E5E8EF" />
+                  <path
+                     d="M16 14.6195C15.2617 14.6195 14.6875 15.2211 14.6875 15.932C14.6875 16.6703 15.2617 17.2445 16 17.2445C16.7109 17.2445 17.3125 16.6703 17.3125 15.932C17.3125 15.2211 16.7109 14.6195 16 14.6195ZM14.6875 11.7758C14.6875 12.514 15.2617 13.0883 16 13.0883C16.7109 13.0883 17.3125 12.514 17.3125 11.7758C17.3125 11.0648 16.7109 10.4633 16 10.4633C15.2617 10.4633 14.6875 11.0648 14.6875 11.7758ZM14.6875 20.0883C14.6875 20.8265 15.2617 21.4008 16 21.4008C16.7109 21.4008 17.3125 20.8265 17.3125 20.0883C17.3125 19.3773 16.7109 18.7758 16 18.7758C15.2617 18.7758 14.6875 19.3773 14.6875 20.0883Z"
+                     fill="#828282" />
+               </svg>
+            </div>
+         </div>
+
+         <!-- FORM PRODUCT 4 -->
+         <div class="products__product">
+            <div class="products__product--checkbox">
+               <input type="checkbox">
+            </div>
+            <div class="products__product--product">
+               <div class="products__product--product-image">
+                  <img src="../../../assets/images/product/product_4.png" alt="product">
+               </div>
+               <div class="products__product--product-content">
+                  <h3>
+                     Imwete Anti Blue Light Computer...<br>
+                     <small>Shopify ID: 343972834378</small>
+                  </h3>
+               </div>
+            </div>
+            <div class="products__product--status active-ul-li">
+               <ul>
+                  <li>Active</li>
+               </ul>
+            </div>
+            <div class="products__product--qty">
+               <h5>2816 <small>in stock for</small></h5>
+               <h5>3 <small>variants</small></h5>
+            </div>
+
+            <div class="products__product--option ">
+               <small class="red-underline">3</small>
+            </div>
+            <div class="products__product--profile">
+               <button class="btn">
+                  <h3>Global selling</h3>
+                  <svg width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                     <path
+                        d="M0.726562 0.181824C0.304688 0.181824 0.09375 0.697449 0.398438 1.00214L3.39844 4.00214C3.58594 4.18964 3.89062 4.18964 4.07812 4.00214L7.07812 1.00214C7.38281 0.697449 7.17188 0.181824 6.75 0.181824H0.726562Z"
+                        fill="#4F4F4F" />
+                  </svg>
+               </button>
+            </div>
+            <div class="products__product--shipping">
+               <button class="btn">
+                  <h3>Shipping 1</h3>
+                  <svg width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                     <path
+                        d="M0.726562 0.181824C0.304688 0.181824 0.09375 0.697449 0.398438 1.00214L3.39844 4.00214C3.58594 4.18964 3.89062 4.18964 4.07812 4.00214L7.07812 1.00214C7.38281 0.697449 7.17188 0.181824 6.75 0.181824H0.726562Z"
+                        fill="#4F4F4F" />
+                  </svg>
+               </button>
+            </div>
+            <div class="products__product--action">
+               <button class="btn btn-action">
+                  <h3>Push to Etsy</h3>
+               </button>
+            </div>
+            <div class="products__product--more">
+               <svg width="40" height="40" viewBox="0 0 32 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="0.5" y="0.682007" width="31" height="31" rx="3.5" stroke="#E5E8EF" />
+                  <path
+                     d="M16 14.6195C15.2617 14.6195 14.6875 15.2211 14.6875 15.932C14.6875 16.6703 15.2617 17.2445 16 17.2445C16.7109 17.2445 17.3125 16.6703 17.3125 15.932C17.3125 15.2211 16.7109 14.6195 16 14.6195ZM14.6875 11.7758C14.6875 12.514 15.2617 13.0883 16 13.0883C16.7109 13.0883 17.3125 12.514 17.3125 11.7758C17.3125 11.0648 16.7109 10.4633 16 10.4633C15.2617 10.4633 14.6875 11.0648 14.6875 11.7758ZM14.6875 20.0883C14.6875 20.8265 15.2617 21.4008 16 21.4008C16.7109 21.4008 17.3125 20.8265 17.3125 20.0883C17.3125 19.3773 16.7109 18.7758 16 18.7758C15.2617 18.7758 14.6875 19.3773 14.6875 20.0883Z"
+                     fill="#828282" />
+               </svg>
+            </div>
+         </div>
+
+         <!-- FORM PRODUCT 5 -->
+         <div class="products__product">
+            <div class="products__product--checkbox">
+               <input type="checkbox">
+            </div>
+            <div class="products__product--product">
+               <div class="products__product--product-image">
+                  <img src="../../../assets/images/product/product_5.png" alt="product">
+               </div>
+               <div class="products__product--product-content">
+                  <h3>
+                     Imwete Anti Blue Light Computer...<br>
+                     <small>Shopify ID: 343972834378</small>
+                  </h3>
+               </div>
+            </div>
+            <div class="products__product--status active-ul-li">
+               <ul>
+                  <li>Active</li>
+               </ul>
+            </div>
+            <div class="products__product--qty">
+               <h5>2816 <small>in stock for</small></h5>
+               <h5>3 <small>variants</small></h5>
+            </div>
+
+            <div class="products__product--option ">
+               <small>2</small>
+            </div>
+            <div class="products__product--profile">
+               <button class="btn">
+                  <h3>Global selling</h3>
+                  <svg width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                     <path
+                        d="M0.726562 0.181824C0.304688 0.181824 0.09375 0.697449 0.398438 1.00214L3.39844 4.00214C3.58594 4.18964 3.89062 4.18964 4.07812 4.00214L7.07812 1.00214C7.38281 0.697449 7.17188 0.181824 6.75 0.181824H0.726562Z"
+                        fill="#4F4F4F" />
+                  </svg>
+               </button>
+            </div>
+            <div class="products__product--shipping">
+               <button class="btn">
+                  <h3>Shipping 1</h3>
+                  <svg width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                     <path
+                        d="M0.726562 0.181824C0.304688 0.181824 0.09375 0.697449 0.398438 1.00214L3.39844 4.00214C3.58594 4.18964 3.89062 4.18964 4.07812 4.00214L7.07812 1.00214C7.38281 0.697449 7.17188 0.181824 6.75 0.181824H0.726562Z"
+                        fill="#4F4F4F" />
+                  </svg>
+               </button>
+            </div>
+            <div class="products__product--action">
+               <button class="btn btn-action">
+                  <h3>Push to Etsy</h3>
+               </button>
+            </div>
+            <div class="products__product--more">
+               <svg width="40" height="40" viewBox="0 0 32 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="0.5" y="0.682007" width="31" height="31" rx="3.5" stroke="#E5E8EF" />
+                  <path
+                     d="M16 14.6195C15.2617 14.6195 14.6875 15.2211 14.6875 15.932C14.6875 16.6703 15.2617 17.2445 16 17.2445C16.7109 17.2445 17.3125 16.6703 17.3125 15.932C17.3125 15.2211 16.7109 14.6195 16 14.6195ZM14.6875 11.7758C14.6875 12.514 15.2617 13.0883 16 13.0883C16.7109 13.0883 17.3125 12.514 17.3125 11.7758C17.3125 11.0648 16.7109 10.4633 16 10.4633C15.2617 10.4633 14.6875 11.0648 14.6875 11.7758ZM14.6875 20.0883C14.6875 20.8265 15.2617 21.4008 16 21.4008C16.7109 21.4008 17.3125 20.8265 17.3125 20.0883C17.3125 19.3773 16.7109 18.7758 16 18.7758C15.2617 18.7758 14.6875 19.3773 14.6875 20.0883Z"
+                     fill="#828282" />
+               </svg>
+            </div>
+         </div>
+
+         <!-- FORM PRODUCT 6 -->
+         <div class="products__product">
+            <div class="products__product--checkbox">
+               <input type="checkbox">
+            </div>
+            <div class="products__product--product">
+               <div class="products__product--product-image">
+                  <img src="../../../assets/images/product/product_6.png" alt="product">
+               </div>
+               <div class="products__product--product-content">
+                  <h3>
+                     Imwete Anti Blue Light Computer...<br>
+                     <small>Shopify ID: 343972834378</small>
+                  </h3>
+               </div>
+            </div>
+            <div class="products__product--status draft-ul-li">
+               <ul>
+                  <li>Draft</li>
+               </ul>
+            </div>
+            <div class="products__product--qty">
+               <h5>2816 <small>in stock for</small></h5>
+               <h5>3 <small>variants</small></h5>
+            </div>
+
+            <div class="products__product--option ">
+               <small>2</small>
+            </div>
+            <div class="products__product--profile">
+               <button class="btn">
+                  <h3>Global selling</h3>
+                  <svg width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                     <path
+                        d="M0.726562 0.181824C0.304688 0.181824 0.09375 0.697449 0.398438 1.00214L3.39844 4.00214C3.58594 4.18964 3.89062 4.18964 4.07812 4.00214L7.07812 1.00214C7.38281 0.697449 7.17188 0.181824 6.75 0.181824H0.726562Z"
+                        fill="#4F4F4F" />
+                  </svg>
+               </button>
+            </div>
+            <div class="products__product--shipping">
+               <button class="btn">
+                  <h3>Shipping 1</h3>
+                  <svg width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                     <path
+                        d="M0.726562 0.181824C0.304688 0.181824 0.09375 0.697449 0.398438 1.00214L3.39844 4.00214C3.58594 4.18964 3.89062 4.18964 4.07812 4.00214L7.07812 1.00214C7.38281 0.697449 7.17188 0.181824 6.75 0.181824H0.726562Z"
+                        fill="#4F4F4F" />
+                  </svg>
+               </button>
+            </div>
+            <div class="products__product--action">
+               <button class="btn btn-action">
+                  <h3>Push to Etsy</h3>
+               </button>
+            </div>
+            <div class="products__product--more">
+               <svg width="40" height="40" viewBox="0 0 32 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="0.5" y="0.682007" width="31" height="31" rx="3.5" stroke="#E5E8EF" />
+                  <path
+                     d="M16 14.6195C15.2617 14.6195 14.6875 15.2211 14.6875 15.932C14.6875 16.6703 15.2617 17.2445 16 17.2445C16.7109 17.2445 17.3125 16.6703 17.3125 15.932C17.3125 15.2211 16.7109 14.6195 16 14.6195ZM14.6875 11.7758C14.6875 12.514 15.2617 13.0883 16 13.0883C16.7109 13.0883 17.3125 12.514 17.3125 11.7758C17.3125 11.0648 16.7109 10.4633 16 10.4633C15.2617 10.4633 14.6875 11.0648 14.6875 11.7758ZM14.6875 20.0883C14.6875 20.8265 15.2617 21.4008 16 21.4008C16.7109 21.4008 17.3125 20.8265 17.3125 20.0883C17.3125 19.3773 16.7109 18.7758 16 18.7758C15.2617 18.7758 14.6875 19.3773 14.6875 20.0883Z"
+                     fill="#828282" />
+               </svg>
+            </div>
+         </div>
+
+         <!-- FORM PRODUCT 7 -->
+         <div class="products__product">
+            <div class="products__product--checkbox">
+               <input type="checkbox">
+            </div>
+            <div class="products__product--product">
+               <div class="products__product--product-image">
+                  <img src="../../../assets/images/product/product_7.png" alt="product">
+               </div>
+               <div class="products__product--product-content">
+                  <h3>
+                     Imwete Anti Blue Light Computer...<br>
+                     <small>Shopify ID: 343972834378</small>
+                  </h3>
+               </div>
+            </div>
+            <div class="products__product--status draft-ul-li">
+               <ul>
+                  <li>Draft</li>
+               </ul>
+            </div>
+            <div class="products__product--qty">
+               <h5>2816 <small>in stock for</small></h5>
+               <h5>3 <small>variants</small></h5>
+            </div>
+
+            <div class="products__product--option ">
+               <small>2</small>
+            </div>
+            <div class="products__product--profile">
+               <button class="btn">
+                  <h3>Global selling</h3>
+                  <svg width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                     <path
+                        d="M0.726562 0.181824C0.304688 0.181824 0.09375 0.697449 0.398438 1.00214L3.39844 4.00214C3.58594 4.18964 3.89062 4.18964 4.07812 4.00214L7.07812 1.00214C7.38281 0.697449 7.17188 0.181824 6.75 0.181824H0.726562Z"
+                        fill="#4F4F4F" />
+                  </svg>
+               </button>
+            </div>
+            <div class="products__product--shipping">
+               <button class="btn">
+                  <h3>Shipping 1</h3>
+                  <svg width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                     <path
+                        d="M0.726562 0.181824C0.304688 0.181824 0.09375 0.697449 0.398438 1.00214L3.39844 4.00214C3.58594 4.18964 3.89062 4.18964 4.07812 4.00214L7.07812 1.00214C7.38281 0.697449 7.17188 0.181824 6.75 0.181824H0.726562Z"
+                        fill="#4F4F4F" />
+                  </svg>
+               </button>
+            </div>
+            <div class="products__product--action">
+               <button class="btn btn-action">
+                  <h3>Push to Etsy</h3>
+               </button>
+            </div>
+            <div class="products__product--more">
+               <svg width="40" height="40" viewBox="0 0 32 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="0.5" y="0.682007" width="31" height="31" rx="3.5" stroke="#E5E8EF" />
+                  <path
+                     d="M16 14.6195C15.2617 14.6195 14.6875 15.2211 14.6875 15.932C14.6875 16.6703 15.2617 17.2445 16 17.2445C16.7109 17.2445 17.3125 16.6703 17.3125 15.932C17.3125 15.2211 16.7109 14.6195 16 14.6195ZM14.6875 11.7758C14.6875 12.514 15.2617 13.0883 16 13.0883C16.7109 13.0883 17.3125 12.514 17.3125 11.7758C17.3125 11.0648 16.7109 10.4633 16 10.4633C15.2617 10.4633 14.6875 11.0648 14.6875 11.7758ZM14.6875 20.0883C14.6875 20.8265 15.2617 21.4008 16 21.4008C16.7109 21.4008 17.3125 20.8265 17.3125 20.0883C17.3125 19.3773 16.7109 18.7758 16 18.7758C15.2617 18.7758 14.6875 19.3773 14.6875 20.0883Z"
+                     fill="#828282" />
+               </svg>
+            </div>
+         </div>
+
       </form>
    </div>
 </template>
 
 <script>
+import actionbar from '../../../components/action.vue';
 export default {
-
+   components: {
+      actionbar
+   }
 };
 </script>
 
@@ -51,6 +504,9 @@ export default {
    background: #FFFFFF;
    border: 1px solid #E5E8EF;
    border-radius: 3px;
+   margin-bottom: 30px;
+   height: 70vh;
+   overflow-y: auto;
 
    &__header {
       h3 {
@@ -63,10 +519,11 @@ export default {
 
    &__product {
       display: flex;
+      gap: 10px;
       justify-content: center;
       align-items: center;
       padding: 31px 0;
-
+      border-bottom: 1px solid #E5E8EF;
 
       &--checkbox {
          flex: 0 0 4.5%;
@@ -81,26 +538,76 @@ export default {
       }
 
       &--product {
-         flex: 0 0 28%;
+         flex: 1;
+         display: flex;
+         gap: 10px;
+         align-content: center;
+
+         &-image {
+            width: 40px;
+            height: 40px;
+         }
+
+         &-content {
+            h3 {
+               line-height: 18px;
+            }
+
+            small {
+               font-weight: 400;
+               font-size: 12px;
+               line-height: 15px;
+               color: #828282;
+            }
+         }
+
       }
 
       &--status {
-         flex: 0 0 8%;
+         flex: 0 0 10%;
          display: flex;
+         gap: 6px;
          justify-content: center;
          align-items: center;
       }
 
       &--qty {
          flex: 0 0 13%;
+
+         h5 {
+            line-height: 18px;
+            color: #252627;
+
+            small {
+               color: #828282
+            }
+         }
       }
 
       &--option {
-         flex: 0 0 8%;
+         flex: 0 0 7%;
+
+         small {
+            color: #828282;
+         }
+
+         .red-underline {
+            position: relative;
+            color: #F2545D;
+         }
+
+         .red-underline::before {
+            content: "";
+            position: absolute;
+            bottom: 1px;
+            left: 0;
+            width: 100%;
+            border-bottom: 1px solid #F2545D;
+         }
       }
 
       &--profile {
-         flex: 0 0 13%;
+         flex: 0 0 11%;
       }
 
       &--shipping {
@@ -113,8 +620,34 @@ export default {
 
       &--more {
          flex: 0 0 5%;
+         display: flex;
+         align-items: center;
+
+         svg {
+            cursor: pointer;
+         }
       }
 
+      button {
+         display: flex;
+         gap: 10px;
+         padding: 8px 7px 7px 9px;
+         border-radius: 4px;
+      }
+   }
+
+   &__product:hover {
+      cursor: pointer;
+      background: #F7F8FA;
+   }
+
+   &__product:first-child:hover {
+      cursor: context-menu;
+      background: none;
+   }
+
+   &__product:last-child {
+      border-bottom: none
    }
 }
 </style>

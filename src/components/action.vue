@@ -1,5 +1,5 @@
 <template>
-   <div class="container action">
+   <div class="action">
       <div class="action__search">
          <div class="input-group">
             <input class="input" type="text" placeholder="Search product">

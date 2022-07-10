@@ -160,7 +160,7 @@ export default {
             top: 0;
             left: 0;
             width: 4px;
-            height: 40px;
+            height: 100%;
             background: #5B86E5;
             border-radius: 0px 6px 6px 0px;
             visibility: hidden;

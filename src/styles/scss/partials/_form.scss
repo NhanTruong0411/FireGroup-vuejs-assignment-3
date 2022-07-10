@@ -4,11 +4,11 @@
    margin-bottom: 20px;
 
    .input {
-      height: 40px;
+      height: 43px;
       width: 100%;
       padding-left: 37px;
-      background: #FFFFFF;
-      border: 1px solid #E5E8EF;
+      background: #ffffff;
+      border: 1px solid #e5e8ef;
       border-radius: 4px;
       color: $secondary-text-color;
       outline: none;
@@ -20,7 +20,8 @@
 
    svg {
       position: absolute;
-      top: 13px;
+      top: 50%;
+      transform: translate(0, -50%);
       left: 13px;
    }
 
@@ -31,12 +32,9 @@
       font-weight: 600;
       font-size: 12px;
       line-height: 18px;
-      color: #4F4F4F;
+      color: #4f4f4f;
       cursor: pointer;
-
    }
-
-
 }
 
 .label {
@@ -53,7 +51,7 @@
    input {
       width: 16px;
       height: 16px;
-      border: 1px solid #CECECE;
+      border: 1px solid #cecece;
       border-radius: 2px;
    }
 }

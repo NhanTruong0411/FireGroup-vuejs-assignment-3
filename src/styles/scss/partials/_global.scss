@@ -52,3 +52,37 @@ a {
 .mb-30 {
    margin-bottom: 30px;
 }
+
+.active-ul-li {
+   ul {
+      list-style: none;
+      color: $primary-color
+         /* Remove default bullets */
+   }
+
+   ul li::before {
+      content: "\2022";
+      color: $primary-color;
+      font-weight: bold;
+      display: inline-block;
+      width: 1em;
+      margin-left: -1em;
+   }
+}
+
+.draft-ul-li {
+   ul {
+      list-style: none;
+      color: #768188;
+         /* Remove default bullets */
+   }
+
+   ul li::before {
+      content: "\2022";
+      color: #768188;
+      font-weight: bold;
+      display: inline-block;
+      width: 1em;
+      margin-left: -1em;
+   }
+}
