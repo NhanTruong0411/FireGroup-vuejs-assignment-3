@@ -44,11 +44,17 @@ const api = {
 
 export default {
    AUTH : {
+      // register
       register(payload) {
          return api.post(`/sign-up`, payload)
       },
+      // login
       login(payload) {
          return api.post(`/sign-in`, payload)
+      },
+      //fethuser
+      fetchUser() {
+         return api.get(`/user`)
       }
    }
 }

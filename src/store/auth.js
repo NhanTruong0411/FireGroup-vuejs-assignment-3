@@ -1,63 +1,105 @@
 import api from "../plugins/api";
 import cookie from "@/plugins/cookie";
-let token = cookie.get('access_token');
+let token = cookie.get('test_token');
 //  STATE
 const state = {
-   token: token ? token : ''
-}
+   token: token ? token : '',
+   user: null,
+};
 
 // GETTERS (COMPUTED)
-const getter = {
-}
+const getters = {
+   getToken() {
+      return state.token;
+   },
+   getUser() {
+      return state.user;
+   }
+};
 
 // MUTATIONS (SETTER)
 const mutations = {
-   // setToken
+   // SET TOKEN
    setToken(state, payload) {
       state.token = payload;
-      cookie.set('access_token', payload, {expires: 7});
-   }
-}
+      cookie.set("test_token", payload, {
+         expires: 7,
+      });
+   },
+   // SET USER
+   setUser(state, payload) {
+      state.user = payload;
+   },
+   // REMOVE USER
+   removeUser(state) {
+      state.user = null;
+   },
+   // REMOVE TOKEN
+   removeToken(state) {
+      state.token = "";
+      cookie.remove("test_token");
+   },
+};
 
 //  ACTION
 const actions = {
 
    // REGISTER
-   async register({commit}, payload) {
+   async register({ commit }, payload) {
       try {
          let res = await api.AUTH.register(payload);
-         let {status, data} = res;
-         if(status && data) {
-            commit("setToken", data.Token)
+         let { status, data } = res;
+         if (status && data) {
+            commit("setToken", data.token);
          }
          return res;
       }
-      catch(err) {
+      catch (err) {
          throw err;
       }
    },
 
    // LOGIN
-   async login( {commit}, payload ) {
+   async login({ commit }, payload) {
       try {
          let res = await api.AUTH.login(payload);
-         let {status, data} = res;
-         if(status, data) {
+         let { status, data } = res;
+         if (status, data) {
             commit('setToken', data.token);
          }
          return res;
       }
-      catch(err) {
+      catch (err) {
          throw err;
       }
-   }
+   },
 
-}     
+   // FETCH USER
+   async fetchUser({ commit }) {
+      try {
+         let res = await api.AUTH.fetchUser();
+         let { data } = res;
+         if (data) {
+            commit('setUser', data);
+         }
+         return res;
+      }
+      catch (err) {
+         throw err;
+      }
+   },
+
+   // LOG OUT
+   logout({ commit }) {
+      commit("removeUser");
+      commit("removeToken");
+   },
+};
 
 export default {
    state,
-   getter,
+   getters,
    mutations,
    actions,
    namespaced: true
-}
+};
