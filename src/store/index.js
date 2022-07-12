@@ -3,8 +3,12 @@ import Vuex from 'vuex'
 
 Vue.use(Vuex)
 
+// IMPORT
+import auth from './auth'
+
 export default new Vuex.Store({
   state: {
+    
   },
   getters: {
   },
@@ -13,5 +17,6 @@ export default new Vuex.Store({
   actions: {
   },
   modules: {
+    auth,
   }
 })

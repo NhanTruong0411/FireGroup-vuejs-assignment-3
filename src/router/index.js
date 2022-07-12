@@ -7,7 +7,7 @@ const routes = [
   // Log in
   {
     path: "/login",
-    name: "login",
+    name: "Login",
     meta: {
       layout: "auth",
 
@@ -18,7 +18,7 @@ const routes = [
   // Register
   {
     path: "/register",
-    name: "register",
+    name: "Register",
     meta: {
       layout: "auth",
     },
@@ -30,28 +30,28 @@ const routes = [
   // dashboard
   {
     path: "/",
-    name: "dashboard",
+    name: "Dashboard",
     component: () => import("../modules/article/views/sidebar.vue"),
   },
 
    // setting
   {
     path: "/setting",
-    name: "setting",
+    name: "Setting",
     component: () => import("../modules/article/views/setting.vue"),
   },
 
   // products
   {
     path: "/product",
-    name: "product",
+    name: "Product",
     component: () => import("../modules/article/views/product.vue"),
   },
 
   // store
   {
     path: "/store",
-    name: "store",
+    name: "Store",
     component: () => import("../modules/article/views/store.vue"),
   },
 ];
