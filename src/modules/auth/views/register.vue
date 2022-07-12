@@ -232,6 +232,7 @@ export default {
          .catch(err => {
             console.log(err);
             this.is_loading = false;
+            alert('This user already exists !')
          })
 
       },
