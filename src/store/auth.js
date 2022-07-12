@@ -21,6 +21,7 @@ const mutations = {
 
 //  ACTION
 const actions = {
+
    // REGISTER
    async register({commit}, payload) {
       try {
@@ -35,8 +36,21 @@ const actions = {
          throw err;
       }
    },
+
    // LOGIN
-   
+   async login( {commit}, payload ) {
+      try {
+         let res = await api.AUTH.login(payload);
+         let {status, data} = res;
+         if(status, data) {
+            commit('setToken', data.token);
+         }
+         return res;
+      }
+      catch(err) {
+         throw err;
+      }
+   }
 
 }     
 

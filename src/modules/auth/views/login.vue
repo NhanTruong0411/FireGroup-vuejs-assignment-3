@@ -195,8 +195,26 @@ export default {
    },
 
    methods: {
+      ...mapActions({
+         LOGIN: 'auth/login'
+      }),
+
       doLogin() {
          this.formstate = true;
+         if(this.is_loading || !this.validation.valid) return;
+         this.is_loading = true;
+         this.LOGIN(this.form)
+         .then((res) => {
+            let { status } = res;
+            if(status) {
+               this.$router.push({name: 'Dashboard'});
+            }
+            this.is_loading = false;
+         })
+         .catch(err => {
+            this.is_loading = false;
+            console.log(err);
+         })
       },
 
       toggleShow() {
