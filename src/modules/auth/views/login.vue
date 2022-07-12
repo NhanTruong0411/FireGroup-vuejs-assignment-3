@@ -43,30 +43,39 @@
          </div>
          <div class="login__left--form">
             <h1>Hi, Welcome Back!</h1>
-            <form id="login__left--form">
 
+            <form id="login__left--form" @submit.stop.prevent="doLogin">
                <!-- INPUT -->
                <div class="login__left--form-input">
                   <div class="input-group">
-                     <input class="input" type="text" placeholder="Your email">
+                     <input class="input" type="text" placeholder="Your email" v-model="form.email">
                      <svg width="14" height="11" viewBox="0 0 14 11" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
                            d="M13.7266 3.97266C13.0977 4.46484 12.3047 5.06641 9.51562 7.08984C8.96875 7.5 7.95703 8.40234 7 8.40234C6.01562 8.40234 5.03125 7.5 4.45703 7.08984C1.66797 5.06641 0.875 4.46484 0.246094 3.97266C0.136719 3.89062 0 3.97266 0 4.10938V9.6875C0 10.4258 0.574219 11 1.3125 11H12.6875C13.3984 11 14 10.4258 14 9.6875V4.10938C14 3.97266 13.8359 3.89062 13.7266 3.97266ZM7 7.5C7.62891 7.52734 8.53125 6.70703 8.99609 6.37891C12.6328 3.75391 12.9062 3.50781 13.7266 2.85156C13.8906 2.74219 14 2.55078 14 2.33203V1.8125C14 1.10156 13.3984 0.5 12.6875 0.5H1.3125C0.574219 0.5 0 1.10156 0 1.8125V2.33203C0 2.55078 0.0820312 2.74219 0.246094 2.85156C1.06641 3.50781 1.33984 3.75391 4.97656 6.37891C5.44141 6.70703 6.34375 7.52734 7 7.5Z"
                            fill="#CECECE" />
                      </svg>
+                     <div class="input-group__error" v-if="formstate">
+                        <template v-if="!validation.form.email.required">Email is required !</template>
+                     </div>
                   </div>
                </div>
 
                <!-- INPUT -->
                <div class="login__left--form-input">
                   <div class="input-group">
-                     <input class="input" type="password" placeholder="Password" id="input-password">
+                     <input v-if="showPassword" type="text" class="input" v-model="password" placeholder="Password" />
+                     <input v-else type="password" class="input" v-model="form.password" placeholder="Password">
                      <svg width="13" height="15" viewBox="0 0 13 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
                            d="M10.9375 6.875H10.2812V4.90625C10.2812 2.63672 8.39453 0.75 6.125 0.75C3.82812 0.75 1.96875 2.63672 1.96875 4.90625V6.875H1.3125C0.574219 6.875 0 7.47656 0 8.1875V13.4375C0 14.1758 0.574219 14.75 1.3125 14.75H10.9375C11.6484 14.75 12.25 14.1758 12.25 13.4375V8.1875C12.25 7.47656 11.6484 6.875 10.9375 6.875ZM7.21875 11.4688C7.21875 12.0977 6.72656 12.5625 6.125 12.5625C5.49609 12.5625 5.03125 12.0977 5.03125 11.4688V10.1562C5.03125 9.55469 5.49609 9.0625 6.125 9.0625C6.72656 9.0625 7.21875 9.55469 7.21875 10.1562V11.4688ZM8.09375 6.875H4.15625V4.90625C4.15625 3.83984 5.03125 2.9375 6.125 2.9375C7.19141 2.9375 8.09375 3.83984 8.09375 4.90625V6.875Z"
                            fill="#CECECE" />
                      </svg>
-                     <a id="hide">HIDE</a>
+                     <a id="hide" @click="toggleShow()">HIDE</a>
+                     <div class="input-group__error" v-if="formstate">
+                        <template v-if="!validation.form.password.required">Password is required !</template>
+                        <template v-else-if="!validation.form.password.minLength">Password minimum 6 characters
+                           !</template>
+                     </div>
                   </div>
                </div>
 
@@ -85,7 +94,7 @@
 
                <!-- LOGIN BTN -->
                <div class="login__left--form-login-btn mb-23">
-                  <button class="btn btn-primary">
+                  <button type="submit" class="btn btn-primary">
                      Login
                   </button>
                </div>
@@ -129,7 +138,7 @@
                <h4>
                   Don't have an account?
                   <a>
-                     <router-link to="/register">Don't have an account?</router-link>
+                     <router-link to="/Register">Don't have an account?</router-link>
                   </a>
                </h4>
 
@@ -149,7 +158,54 @@
 </template>
 
 <script>
-export default {};
+import { mapGetters, mapMutations, mapState, mapActions } from 'vuex';
+
+export default {
+
+   data() {
+      return {
+         form: {
+            email: 'nhan100@gmail.com',
+            password: '123456',
+            timezone: "Asia/Bangkok",
+         },
+         showPassword: false,
+         formstate: false,
+         is_loading: false,
+      };
+   },
+
+   computed: {
+      validation() {
+         const email = {
+            required: this.form.email ? true : false
+         };
+         const password = {
+            required: this.form.password ? true : false,
+            minLength: this.form.password.length >= 6 ? true : false
+         };
+         return {
+            form: {
+               email,
+               password
+            },
+            valid: email.required && password.required && password.minLength
+         };
+      }
+   },
+
+   methods: {
+      doLogin() {
+         this.formstate = true;
+      },
+
+      toggleShow() {
+         this.showPassword = !this.showPassword;
+      }
+
+   }
+
+};
 </script>
 
 <style lang="scss" scoped>
@@ -158,7 +214,7 @@ export default {};
 .login {
    display: flex;
    width: 100%;
-   height: 100vh;
+   min-height: 100vh;
    background-color: #f6f8ff;
 
    &__left {

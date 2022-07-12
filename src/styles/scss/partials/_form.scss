@@ -1,7 +1,13 @@
 .input-group {
+   display: block;
    position: relative;
    height: 40px;
-   margin-bottom: 20px;
+   margin-bottom: 30px;
+
+   &__error {
+      position: absolute;
+      color: #F2545D;
+   }
 
    .input {
       height: 43px;
