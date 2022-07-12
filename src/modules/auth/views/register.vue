@@ -223,7 +223,7 @@ export default {
             let { status } = res;
             if( status ) {
                this.$router.push({
-                  name: 'Login'
+                  name: 'Dashboard'
                })
             }
             this.is_loading = false;
