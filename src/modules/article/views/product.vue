@@ -534,6 +534,8 @@ export default {
          input {
             width: 16px;
             height: 16px;
+            cursor: pointer;
+
          }
       }
 
@@ -637,7 +639,7 @@ export default {
    }
 
    &__product:hover {
-      cursor: pointer;
+      // cursor: pointer;
       background: #F7F8FA;
    }
 

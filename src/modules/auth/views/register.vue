@@ -175,7 +175,7 @@ export default {
    data() {
       return {
          form: {
-            email: 'nhan100@gmail.com',
+            email: 'nhan420@gmail.com',
             name: 'nhan',
             password: '123456',
             timezone: "Asia/Bangkok",
@@ -223,7 +223,7 @@ export default {
             let { status } = res;
             if( status ) {
                this.$router.push({
-                  name: 'Dashboard'
+                  name: 'Login'
                })
             }
             this.is_loading = false;

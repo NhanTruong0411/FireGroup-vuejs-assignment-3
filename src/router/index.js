@@ -1,7 +1,7 @@
 import Auth from "@/middlewares/auth";
+import store from '@/store'
 import Vue from "vue";
 import VueRouter from "vue-router";
-import store from '@/store'
 
 Vue.use(VueRouter);
 
@@ -12,7 +12,6 @@ const routes = [
     name: "Login",
     meta: {
       layout: "auth",
-
     },
     component: () => import("../modules/auth/views/login.vue"),
   },
@@ -26,8 +25,6 @@ const routes = [
     },
     component: () => import("../modules/auth/views/register.vue"),
   },
-
-  // Log out
 
   // dashboard
   {
